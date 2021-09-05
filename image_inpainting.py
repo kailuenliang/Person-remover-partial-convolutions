@@ -8,7 +8,7 @@ from libs.utils import str2bool
 parser = argparse.ArgumentParser()
 
 parser.add_argument('-b', '--batch-size', default=8, type=int, help='Size of the batch')
-parser.add_argument('-e', '--epochs', default=500, type=int, help='Number of epochs')
+parser.add_argument('-e', '--epochs', default=2000, type=int, help='Number of epochs')
 parser.add_argument('-lr', '--learning-rate', default=5e-5, type=float, help='Initial learning rate')
 parser.add_argument('-w', '--write-per-epoch', default=10, type=int, help='Times to write per epoch')
 parser.add_argument('-train', '--training-dir', default='Datasets/Paris/paris_train_original', type=str, help='Path for training samples')
@@ -18,7 +18,7 @@ parser.add_argument('-s', '--image-size', default=512, type=int, help='Size of t
 parser.add_argument('-r', '--restore-check', default=True, type=str2bool, help='Restore last checkpoint in folder --checkpoint')
 parser.add_argument('-c', '--checkpoint-dir', default='inpainter/weights', help='Checkpoint directory')
 parser.add_argument('-m', '--mode', default='test', help='Mode: train or test')
-parser.add_argument('-ie', '--initial-epoch', default=100, type=int, help='Initial epoch')
+parser.add_argument('-ie', '--initial-epoch', default=1000, type=int, help='Initial epoch')
 parser.add_argument('-config', '--config_file', default='config.yml', type=str, help='Path for config file')
 parser.add_argument('-f', '--freeze-bn', type=str2bool, nargs='?', const=True, default=False, help='Freeze BN while training')
 parser.add_argument('-po', '--pretrained-outside', type=str2bool, nargs='?', const=True, default=False, help='Take the pretrained model from github')
