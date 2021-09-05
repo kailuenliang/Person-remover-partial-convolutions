@@ -14,7 +14,7 @@ import matplotlib.pyplot as plt
 
 class Inpainter:
     def __init__(self, mode, train_dataset=False, test_dataset=False, checkpoint_dir='', restore_parameters=False,
-                 epochs=100, lr=2e-4, batch_size=8, initial_epoch=None, writing_per_epoch=10, freeze_bn=False,
+                 epochs=2000, lr=2e-4, batch_size=8, initial_epoch=None, writing_per_epoch=10, freeze_bn=False,
                  config_path='config.yml', outside_pretrain=False):
         self.mode = mode
         self.input_channels = 3
